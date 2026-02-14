@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Salma ❤️</title>
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+.login-box{
+    text-align:center;
+}
+input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff4b7d;
+    color:white;
+    cursor:pointer;
+}
+.main{
+    display:none;
+    text-align:center;
+    color:white;
+}
+img{
+    width:300px;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+.message{
+    margin-top:20px;
+    font-size:18px;
+    max-width:450px;
+    line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>Enter The Secret Password 💌</h2>
+    <input type="password" id="pass">
+    <button onclick="check()">Open</button>
+    <p id="error" style="color:red;"></p>
+</div>
+
+<div class="main" id="main">
+    <h1>To My Favorite Person ❤️</h1>
+    <img id="slider" src="1.jpg.JPG">
+    <div class="message">
+        انا بحبك جدا ومش انهارده بس ولا بكره بس ولا حتى امبارح واول انا بحبك فكل وقت من اول ما عرفتك لحد ما اموت وعايزك معايا فكل حاجه فحياتي ومبسوط بوجودك معايا وعايزك تبقي عارفه انك الحاجه الوحيده الي انا عايش عشانها 💕
+    </div>
+    <audio autoplay loop>
+        <source src="New Recording.mp3.m4a" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+function check(){
+    var password = document.getElementById("pass").value;
+    if(password === "Salma4yousif"){
+        document.querySelector(".login-box").style.display="none";
+        document.getElementById("main").style.display="block";
+    } else {
+        document.getElementById("error").innerText="Wrong password 🥺";
+    }
+}
+
+// الصور بالسلايدر
+var images=["1.jpg.JPG","2.jpg.JPG","3.jpg.jpg","4.jpg.jpg","5.jpg.jpg","6.jpg.jpg","7.jpg.jpg","8.jpg.heic","9.jpg.heic"];
+var i=0;
+setInterval(function(){
+    i++;
+    if(i>=images.length){i=0;}
+    document.getElementById("slider").src=images[i];
+},3000);
+</script>
+
+</body>
+</html>
